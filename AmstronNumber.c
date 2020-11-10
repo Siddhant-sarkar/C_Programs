@@ -9,15 +9,13 @@ int main(){
 
     int cubic_sum=0;
     int temp=0;
-    do
+    while (number!=0)
     {
         temp=number%10;
-        int power=pow(temp,3);
-        printf("the cube is %d\n",power);
-        cubic_sum+=pow(temp,3);
+        cubic_sum+=temp*temp*temp;
         number/=10;
+    }
     
-    } while (number!=0);
     if(cubic_sum==copy_num){
         printf("The number %d is an Amstrong Number \n",copy_num);
     }else
